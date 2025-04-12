@@ -1,102 +1,206 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
   line-height: 1.6;
 }
 
 .image-frame {
-  max-width: 300px;
-  padding: 10px;
-  border: 8px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin: 0 auto 20px auto;
-  background-color: #fff;
+  max-width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile-pic {
+.image-frame img.profile-pic {
   width: 100%;
   height: auto;
+  max-height: 250px;
+  object-fit: cover;
   display: block;
-  border-radius: 5px;
 }
 
-nav ul {
+nav {
+  background-color: #00334d;
+  padding: 10px 0;
+}
+
+.nav-list {
   list-style: none;
-  background-color: #333;
-  overflow: hidden;
-  color: white;
-  padding: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin: 0;
+  padding: 0;
 }
 
-nav ul li {
-  display: inline;
-  padding: 20px;
+.nav-list li {
+  margin: 0 20px;
 }
 
-nav ul li a {
+.nav-list li a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-list li a:hover {
+  background-color: #005580;
+  color: #ffcc00;
 }
 
 .hero {
   text-align: center;
-  padding: 100px 20px;
-  background-color: #f4f4f4;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #e0f7fa, #f1f8e9);
 }
 
 .btn {
   display: inline-block;
-  padding: 10px 20px;
-  background: #333;
+  padding: 12px 25px;
+  background: #0077b6;
   color: white;
   text-decoration: none;
   border-radius: 5px;
   margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #023e8a;
+}
+
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.highlight {
+  flex: 0 1 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #e1f5fe;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.highlight:hover {
+  transform: translateY(-10px);
 }
 
 .project-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 40px 20px;
+  background-color: #f0f8ff;
 }
 
 .project-card {
-  width: 300px;
-  margin: 20px;
-  padding: 20px;
-  background: #eee;
+  background: #fff;
   border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 15px;
+  max-width: 300px;
   text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 5px;
 }
 
 form {
   max-width: 600px;
-  margin: auto;
+  margin: 0 auto;
+  background: #fff;
   padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 form input,
 form textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #023e8a;
+}
+
+.social-links {
+  text-align: center;
+  margin-top: 20px;
 }
 
 .social-links a {
-  margin-right: 15px;
-  color: #333;
+  margin: 0 10px;
+  color: #0077b6;
   text-decoration: none;
+  font-weight: bold;
 }
 
-@media (max-width: 600px) {
-  nav ul li {
-    display: block;
-    padding: 10px;
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #002633;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+  margin-top: 30px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
   }
+
+  .highlight,
+  .project-card {
+    flex: 1 1 100%;
+  }
+
   .project-gallery {
     flex-direction: column;
     align-items: center;

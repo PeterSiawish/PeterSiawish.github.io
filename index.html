@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <div class="image-frame">
-        <a href="index.html">
-          <img
-            src="assets/images/self_portrait.png"
-            alt="Header Image"
-            class="profile-pic"
-          />
-        </a>
+        <img src="" alt="Header Image" class="profile-pic" />
       </div>
       <nav>
-        <ul>
+        <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
@@ -29,15 +29,43 @@
     <main>
       <section class="hero">
         <h1>Hello, I'm Peter Siawish!</h1>
-        <p>Welcome to my personal website!</p>
+        <p>
+          Welcome to my personal website! I’m passionate about technology,
+          design, and turning creative ideas into reality.
+        </p>
         <a href="assets/cv/sample_cv.pdf" download class="btn">
           Download My CV
         </a>
       </section>
+      <section class="highlights">
+        <div class="highlight">
+          <h2>Top Student</h2>
+          <p>
+            Consistently ranked #1 in class with a GPA of 4.0 and recipient of
+            multiple academic excellence awards.
+          </p>
+        </div>
+        <div class="highlight">
+          <h2>Innovative Projects</h2>
+          <p>
+            From AI dashboards to virtual simulations, I’ve built tools that are
+            practical, impactful, and elegant.
+          </p>
+        </div>
+        <div class="highlight">
+          <h2>Real Experience</h2>
+          <p>
+            Interned at leading companies like Google and OpenAI, building
+            production-grade solutions.
+          </p>
+        </div>
+      </section>
     </main>
     <footer>
-      <p>&copy; 2025 Peter Siawish</p>
+      <div class="footer-content">
+        <p>&copy; 2025 Peter Siawish. All rights reserved.</p>
+        <p>Made with ❤️ and lots of code.</p>
+      </div>
     </footer>
-    <script src="js/main.js"></script>
   </body>
 </html>
